@@ -317,7 +317,6 @@
     <!--============================================================
       AssemblyAttributesGenerator
       ============================================================-->
-    <!--
     <Message
       Text="Starting AssemblyAttributesGenerator"
       Condition="'$(SkipAssemblyAttributesGenerator)'!='true'"
@@ -325,14 +324,15 @@
     <AssemblyAttributesGenerator
       Condition="'$(SkipAssemblyAttributesGenerator)'!='true'"
       IsSLMigration="$(IsSLMigration)"
-      OutputFile="$(MSBuildProjectDirectory)\$(IntermediateOutputPath)CSharpXamlForHtml5_AssemblyAttributes.cs"
+      ProductName="OpenSilver"
+      OutputFile="$(MSBuildProjectDirectory)\$(IntermediateOutputPath)OpenSilver_AssemblyAttributes.cs"
       IntermediateOutputAbsolutePath="$(MSBuildProjectDirectory)\$(IntermediateOutputPath)"
       />
     <ItemGroup>
       <Compile
         Condition="'$(SkipAssemblyAttributesGenerator)'!='true'"
-        Include="$(MSBuildProjectDirectory)\$(IntermediateOutputPath)CSharpXamlForHtml5_AssemblyAttributes.cs" />
-    </ItemGroup>-->
+        Include="$(MSBuildProjectDirectory)\$(IntermediateOutputPath)OpenSilver_AssemblyAttributes.cs" />
+    </ItemGroup>
 
     <!--============================================================
       ServiceReferenceFixer (case insensitive) (only during Pass 2)
